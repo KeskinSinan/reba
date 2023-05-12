@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class TableCService {
     private final TableCRepository repository;
     public Integer calculateRebaScore(TableCDto tableCDto){
-        Integer tableCScore = repository.getTableCScore(tableCDto.getTableAScore(),tableCDto.getTableAScore());
+        Integer tableCScore = repository.getTableCScore(tableCDto.getTableAScore(),tableCDto.getTableBScore());
         if (tableCDto.getTableCOption1() == true) {
             tableCScore++;
         }
