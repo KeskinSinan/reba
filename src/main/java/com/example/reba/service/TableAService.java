@@ -3,8 +3,6 @@ package com.example.reba.service;
 
 import com.example.reba.dto.CalculationDto;
 import com.example.reba.dto.TableADto;
-import com.example.reba.entity.Demo;
-import com.example.reba.repository.DemoRepository;
 import com.example.reba.repository.TableARepository;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -17,16 +15,9 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class TableAService {
 
-    private final DemoRepository demoRepository;
     private final TableARepository repository;
 
-    public Void deneme(String name){
-        Demo demo = new Demo();
-        demo.setName(name);
-        demo.setDescription("Açıklama");
-        demoRepository.save(demo);
-        return null;
-    }
+
 
     public static Integer calculateNeck(CalculationDto calculationDto){
         Integer score = 0;

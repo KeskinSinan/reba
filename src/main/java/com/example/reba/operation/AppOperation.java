@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 public interface AppOperation {
 
-    @GetMapping("/calculate/a")
+    @PostMapping("/calculate/a")
     Integer calculateA(@RequestBody TableADto tableADto);
 
-    @GetMapping("/calculate/b")
+    @PostMapping("/calculate/b")
     Integer calculateB(@RequestBody TableBDto tableBDto);
-    @GetMapping("/calculate/reba")
+    @PostMapping("/calculate/reba")
     Integer calculateReba(@RequestBody TableCDto tableCDto);
 }

@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Table(name = "demo_table")
+@Table(name = "table_a")
 public class TableA implements Serializable {
     @Column(name = "neck")
     private Integer neck;

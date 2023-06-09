@@ -35,10 +35,10 @@ public class JpaConfig {
     public DataSource dataSource() {
         // configure and return the data source
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/reba");
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("Sinyorfutaci07");
+        dataSource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        dataSource.setUrl("jdbc:sqlserver://benimsunucum.database.windows.net;databaseName=reba");
+        dataSource.setUsername("sinan");
+        dataSource.setPassword("Asdqwe123");
         return dataSource;
     }
 
@@ -49,7 +49,7 @@ public class JpaConfig {
 
     private Properties jpaProperties() {
         Properties props = new Properties();
-        props.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+        props.setProperty("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
         props.setProperty("hibernate.show_sql", "true");
         props.setProperty("hibernate.format_sql", "true");
         props.setProperty("hibernate.hbm2ddl.auto", "update");
