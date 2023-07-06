@@ -1,5 +1,4 @@
-REBA Calculator For Our University Capstone Project!
-
+## REBA Calculator For Our University Capstone Project!
 This calculator analyzes employee postures and helps to perform risk analysis and REBA score calculation.
 
 The usage scenario is as follows.
@@ -20,3 +19,7 @@ That's it! The rest is up to your ergonomic knowledge and choices.
 
 
 You can download the source code or use the system live: www.reba-calculator.com
+
+# Warning
+If you are going to access the system with source codes, you should also download the reba-frontend project to your computer.
+reba-frontend link : https://github.com/KeskinSinan/reba-frontend
