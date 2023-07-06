@@ -1,5 +1,6 @@
 package com.example.reba.operation;
 
+import com.example.reba.dto.LoginDto;
 import com.example.reba.dto.TableADto;
 import com.example.reba.dto.TableBDto;
 import com.example.reba.dto.TableCDto;
@@ -17,4 +18,6 @@ public interface AppOperation {
     Integer calculateB(@RequestBody TableBDto tableBDto);
     @PostMapping("/calculate/reba")
     Integer calculateReba(@RequestBody TableCDto tableCDto);
+    @PostMapping("/login")
+    Boolean loginCheck(@RequestBody LoginDto loginDto);
 }

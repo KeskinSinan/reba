@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TableARepository extends JpaRepository<TableA,Long> {
-    @Query(value = "select score from public.table_a ta where ta.neck=:neck and ta.trunk=:trunk and ta.legs=:legs", nativeQuery = true)
+    @Query(value = "select score from table_a ta where ta.neck=:neck and ta.trunk=:trunk and ta.legs=:legs", nativeQuery = true)
     Integer getTableAPostureScore(Integer neck, Integer trunk, Integer legs);
 }

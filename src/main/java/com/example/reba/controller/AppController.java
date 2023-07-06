@@ -1,9 +1,11 @@
 package com.example.reba.controller;
 
+import com.example.reba.dto.LoginDto;
 import com.example.reba.dto.TableADto;
 import com.example.reba.dto.TableBDto;
 import com.example.reba.dto.TableCDto;
 import com.example.reba.operation.AppOperation;
+import com.example.reba.service.LoginService;
 import com.example.reba.service.TableAService;
 import com.example.reba.service.TableBService;
 import com.example.reba.service.TableCService;
@@ -22,6 +24,7 @@ public class AppController implements AppOperation {
     private final TableAService tableAService;
     private final TableBService tableBService;
     private final TableCService tableCService;
+    private final LoginService loginService;
 
     @Override
     public Integer calculateA(TableADto tableADto) {
@@ -36,5 +39,10 @@ public class AppController implements AppOperation {
     @Override
     public Integer calculateReba(TableCDto tableCDto) {
         return tableCService.calculateRebaScore(tableCDto);
+    }
+
+    @Override
+    public Boolean loginCheck(LoginDto loginDto) {
+        return loginService.loginCheck(loginDto);
     }
 }
